@@ -78,9 +78,15 @@ WSGI_APPLICATION = 'catalogo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'mssql',
+        'NAME': 'BD.ONG.1',
+        'USER': 'sa',
+        'PASSWORD': 'sa',
+        'HOST': 'localhost',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server'
+            },
+    },
 }
 
 
