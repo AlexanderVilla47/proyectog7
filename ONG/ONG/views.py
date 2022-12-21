@@ -21,5 +21,12 @@ def inicio(request):
 
 def login(request):
     template_name= "login.html"
-    
+    #if 'ingresar' in request.POST:
+    #    username= request.POST.get("username")
+    #if 'ingresar' in request.POST:
+    #    username= request.POST.get("password")   
+        
+    #print(request.method)
+    #print(request.POST.get("password", None))
+    #print(request.POST.get("username", None))
     return render(request, template_name, {})
