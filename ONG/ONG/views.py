@@ -18,3 +18,8 @@ def inicio(request):
         'Noticias': noticias,
     }
     return render(request, template_name, contexto)
+
+def login(request):
+    template_name= "login.html"
+    
+    return render(request, template_name, {})
