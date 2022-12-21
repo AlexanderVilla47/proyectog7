@@ -7,14 +7,14 @@ def inicio(request):
     template_name= "index.html"
     
     #n = Noticias.objects.create(
-    #    titulo= "Salvamos un gato",
+    #    titulo= "Salvamos un cav",
     #    descripcion= "Hoy encontramos un gato casi muerto y lo salvamos :)",
     #    fecha= "10/11/1000"
     #)
     
-    Noticia= Noticias.objects.all()
-    
+    noticias= Noticias.objects.all()
+
     contexto= {
-        'Not': Noticias
+        'Noticias': noticias,
     }
     return render(request, template_name, contexto)
