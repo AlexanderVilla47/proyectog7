@@ -30,6 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'Usuarios.Usuario'
 
 # Application definition
 
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Noticias',
+    'Usuarios',
 ]
 
 MIDDLEWARE = [
