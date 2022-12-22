@@ -32,7 +32,7 @@ def noticias(request):
     
 
     contexto= {
-        'Noticias': Noticias.objects.all(),
+        'Noticias': Noticias.objects.filter(activo=True),
     }
     
     return render(request, template_name, contexto)
