@@ -5,5 +5,7 @@ class Noticias(models.Model):
     descripcion = models.CharField(max_length=800)
     fecha = models.CharField ( max_length = 10)
     
+    activo= models.BooleanField(default=True)
+    
     def __str__(self):
         return self.titulo
