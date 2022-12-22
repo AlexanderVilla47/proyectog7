@@ -2,14 +2,14 @@
 
     {% block uno %}
 
-        {% for Noticias in Noticias %}
-            <div class="card">
-                <div class="card-body">
-                <h5 class="card-title">{{Noticias.titulo}}</h5>
-                <p class="card-text">{{Noticias.descripcion}}</p>
-                <p class="card-text"><small class="text-muted">{{Noticias.fecha}}</small></p>
-            </div>
-        {% endfor %}
+            {% for Noticias in Noticias %}
+                <div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">{{Noticias.titulo}}</h5>
+                    <p class="card-text">{{Noticias.descripcion}}</p>
+                    <p class="card-text"><small class="text-muted">{{Noticias.fecha}}</small></p>
+                </div>
+            {% endfor %}
 
         <a class="btn btn-primary" href="{% url 'edicion_noticias:admin_edicion_noticias' %} " role="button">Editar</a>
     {% endblock uno %}

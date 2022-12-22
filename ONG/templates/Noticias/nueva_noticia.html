@@ -3,6 +3,6 @@
     {% block uno %}
         <form method="post"> {% csrf_token %}
             {{form.as_p}}
-            <a class="btn btn-primary" href="{% url 'edicion_noticias:admin_edicion_noticias' %} " role="button">Agregar</a>
+            <p><button class="w-100 btn btn-lg btn-primary" type="submit" href="{% url 'edicion_noticias:admin_edicion_noticias' %} " name="Agregar">Agregar</button></p>
         </form>
     {% endblock uno %}
