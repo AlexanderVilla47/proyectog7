@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'Usuarios.Usuario'
 LOGIN_REDIRECT_URL= "/inicio"
-
+LOGIN_URL= "/login"
 # Application definition
 
 INSTALLED_APPS = [
