@@ -1,43 +1,44 @@
 {% extends 'base/base.html' %}
 
-{% block uno %}
-    <div class="row">
-        <div class="col">
-            <button type="button" class="btn btn-success">Agregar Noticia</button>
-        </div>
-
-    <div class="card">
-        <div class="card-header">
-            Lista de Noticias
-        </div>
-        <div class="card-body">
-            <div class="bd-example">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Titulo</th>
-                            <th scope="col">Descripción</th>
-                            <th scope="col">Imagen</th>
-                            <th scope="col">Editar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for Noticias in Noticias %}
-                            <tr>
-                                <td>{{Noticias.titulo}}</td>
-                                <td>{{Noticias.descripcion}}</td>
-                                <td>{{Noticias.imagen}}</td>
-                                <td>
-                                    <button type="button" class="btn btn-danger">Eliminar</button>
-                                    <button type="button" class="btn btn-warning">Modificar</button>
-                                </td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-        
-                </table>
+    {% block uno %}
+        <div class="row">
+            <div class="col">
+                <a class="btn btn-primary" href="{% url 'edicion_noticias:NuevaNoticia' %} " role="button">Nueva Noticia</a>
             </div>
         </div>
-    </div>
-    <a class="btn btn-primary" href="{% url 'Noticias' %} " role="button">Volver</a>
-{% endblock uno %}
+        
+        <div class="card">
+            <div class="card-header">
+                Lista de Noticias
+            </div>
+            <div class="card-body">
+                <div class="bd-example">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Titulo</th>
+                                <th scope="col">Descripción</th>
+                                <th scope="col">Imagen</th>
+                                <th scope="col">Editar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for Noticias in Noticias %}
+                                <tr>
+                                    <td>{{Noticias.titulo}}</td>
+                                    <td>{{Noticias.descripcion}}</td>
+                                    <td>{{Noticias.imagen}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger">Eliminar</button>
+                                        <button type="button" class="btn btn-warning">Modificar</button>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+            
+                    </table>
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-primary" href="{% url 'Noticias' %} " role="button">Volver</a>
+    {% endblock uno %}

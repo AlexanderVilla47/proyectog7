@@ -1,0 +1,8 @@
+{% extends 'base/base.html' %}
+
+    {% block uno %}
+        <form method="post"> {% csrf_token %}
+            {{form.as_p}}
+            <a class="btn btn-primary" href="{% url 'edicion_noticias:admin_edicion_noticias' %} " role="button">Agregar</a>
+        </form>
+    {% endblock uno %}

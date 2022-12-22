@@ -6,4 +6,5 @@ app_name= "edicion_noticias"
 
 urlpatterns = [
     path('admin/edicion', views.admin_edicion_noticias, name= 'admin_edicion_noticias'),
+    path('admin/agregar', views.NuevaNoticia.as_view(), name= 'NuevaNoticia'),
 ]
