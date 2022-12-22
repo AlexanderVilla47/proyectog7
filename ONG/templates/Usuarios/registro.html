@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+
+    {% block uno %}
+        <div class="card">
+            <div class="card-body">
+                <form method="post"> {% csrf_token %}
+                    {{form.as_p}}
+                    <p><button class="w-100 btn btn-lg btn-primary" type="submit" name="Registrarme">Registrarme</button></p>
+                    <p></p><a class="w-100 btn btn-lg btn-primary" href=" {% url 'Inicio' %} ">Volver al Inicio</a></p>
+                </form>
+            </div>
+        </div>
+    {% endblock uno %}

@@ -14,4 +14,5 @@ urlpatterns = [
     
     #url apps
     path('noticias/',  include('Noticias.urls')),
+    path('usuarios/',  include('Usuarios.urls')),
 ]
