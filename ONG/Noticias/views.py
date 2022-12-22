@@ -22,6 +22,9 @@ class ListadoNoticias(ListView):
     context_object_name = 'Noticias'
     paginate_by = 3
     
+    def get_queryset(self):
+        return Noticias.objects.all().order_by("titulo")
+    
 
 class NuevaNoticia(CreateView):
     model= Noticias
